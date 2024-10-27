@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/kirubel12/laravel-nextjs-boilerplate.git
+[submodule "server"]
+	path = server
+	url = https://github.com/kirubel12/arifspot-admin.git
