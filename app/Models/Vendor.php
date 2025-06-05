@@ -11,8 +11,13 @@ class Vendor extends Model
         "name",
         "description",
         "phone_number",
+        "cancellation_policy",
+        "safety_property",
+        "house_rules",
+        "google_map_url",
         "images",
         "rating",
+        "subscity_id",
         "city_id",
         "category_id",
 
@@ -29,5 +34,9 @@ class Vendor extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+    public function subcity()
+    {
+        return $this->belongsTo(Subcity::class);
     }
 }

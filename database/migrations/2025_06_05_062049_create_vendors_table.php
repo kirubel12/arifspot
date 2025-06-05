@@ -19,6 +19,11 @@ return new class extends Migration {
             $table->string('images')->nullable();
             $table->enum('rating', ['1', '2', '3', '4', '5'])->default('3');
             $table->foreignId('city_id')->constrained()->onDelete('cascade');
+            $table->foreignId('subscity_id')->constrained()->onDelete('cascade');
+            $table->text('cancellation_policy')->nullable();
+            $table->text('safety_property')->nullable();
+            $table->text('house_rules')->nullable();
+            $table->string('google_map_url')->nullable();
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
 
             $table->timestamps();
